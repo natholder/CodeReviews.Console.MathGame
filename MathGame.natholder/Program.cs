@@ -17,11 +17,14 @@ class Program
 {
     static void Main(string[] args)
     {
+        //initial variables
         string userInput;
         Random random = new Random();
         int number;
         bool running = true;
         List<string> history = new List<string>();
+
+        //main game loop
         while (running)
         {
             ShowMenu();
@@ -89,7 +92,7 @@ class Program
 
     static int PlayGame(string operation, Random random)
     {
-        Console.WriteLine("Answer the following question.");
+        Console.WriteLine("Answer the following questions.");
         int score = 0;
 
         for (int i = 0; i < 5; i++)
