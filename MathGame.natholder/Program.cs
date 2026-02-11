@@ -9,16 +9,12 @@ requirements:
 6. You don't need to record results on a database. Once the program is closed the results will be deleted.
 */
 
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Runtime.InteropServices;
-
 class Program
 {
     static void Main(string[] args)
     {
         //initial variables
-        string userInput;
+        string? userInput;
         Random random = new Random();
         int number;
         bool running = true;
@@ -101,7 +97,6 @@ class Program
             int num2 = random.Next(1, 11);
             int userInputInt;
             int solution;
-            bool isValidInput;
 
             switch (operation)
             {
@@ -128,7 +123,7 @@ class Program
             }
 
             Console.WriteLine($"{num1} {operation} {num2}");
-            string userInput = Console.ReadLine();
+            string? userInput = Console.ReadLine();
 
             if (int.TryParse(userInput, out userInputInt))
             {
